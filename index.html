@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url("https://wallpapercat.com/w/full/8/5/0/2154427-3840x2160-desktop-4k-hearts-wallpaper.jpg");
+            background-size: cover;  
+            background-position: center; 
+            background-repeat: repeat;
+            font-family:'Courier New', Courier, monospace;
+            margin: 0;  
+            user-select: none;
+            height: 100%; 
+            background-color: black;
+        }
+        #maincontainer{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%; 
+        }
+        #titel{
+            color: wheat;
+            background-color: black;
+            border-radius: 5px;
+            padding: 20px;
+            width: 40vw;
+            user-select: none;
+            font-size: 20px;
+            transition: 0.2s;
+            border-style: solid;
+            border-color: black;
+            display: block;
+        }
+        #titel:hover{
+            opacity: 90%;
+        }
+        #heart{
+            color: red;
+        }
+        #imgdiv{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30%;
+            border-radius: 10px;
+            margin-bottom: 20vh;
+        }
+        #img1, #img2, #img3, #img4{
+            display: inline-block;
+            border-radius: 10px;
+            width: 43vw;
+            max-height: 60vh;
+            border-style: solid;
+            border-width: 2px;
+            border-color: purple;
+            transition: 0.2s;
+        }
+        #img2, #img3, #img4{
+            display: none;
+        }
+        #img1:hover{
+            opacity: 90%;
+        }
+        #bottomcontainer{
+            height: 100%;
+            width: 100%; 
+            background-color: transparent;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn1,#btn2{
+            height: 5vh;
+            width: 4vw;
+            border-style: solid;
+            border-radius: 0%;
+            border-width: 1.5px;
+            border-color: purple;
+            margin: 10px;
+            background-color: pink;
+            color: purple;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.1s;
+        }
+        #btn1:hover, #btn2:hover{
+            cursor: pointer;
+            background-color: purple;
+            color: pink;
+        }
+        #yr{
+            color: gold;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #introduction{
+            background-color: black;
+            border-radius: 10px;
+            color: wheat;
+            width: 40vw;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            margin-top: -76.5vh;
+            transition: 0.2s;
+            user-select: none;
+        }
+        #introduction:hover{
+            opacity: 90%;
+        }
+    </style>
+    <div id="maincontainer">
+        <p id="titel"> 💍 Liza's & Alexey's Anniversary 💍</p>
+    </div>
+    <div id="imgdiv">
+        <button id="btn1"><-</button>
+        <img id="img1" src="https://drive.google.com/thumbnail?id=1wmLN1xlg3r48Qbxmcg4XP75HwGgeyVCZ&sz=s500" alt="Anniversary Image">
+        <img id="img2" src="data:image/jpeg;base64,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" alt="Anniversary Image">
+        <img id="img3" src="https://drive.google.com/thumbnail?id=1wmLN1xlg3r48Qbxmcg4XP75HwGgeyVCZ&sz=s500" alt="Anniversary Image">
+        <img id="img4" src="https://drive.google.com/thumbnail?id=1wmLN1xlg3r48Qbxmcg4XP75HwGgeyVCZ&sz=s500" alt="Anniversary Image">
+        <button id="btn2">-></button>
+    </div>
+    <div id="bottomcontainer">
+        <p id="introduction">
+         <span id="heart">❤</span>   It has been <span id="yr"> 💍 ONE YEAR 💍</span> <span id="heart">❤</span>
+        </p>
+    </div>
+
+    <script>
+        let img2 = document.getElementById("img2")
+        let img3 = document.getElementById("img3")
+        let img4 = document.getElementById("img4")
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let img1 = document.getElementById("img1")
+
+        btn2.onclick = function(){
+            if (img1.style.display="inline-block") {
+                img1.style.display="none"
+                img2.style.display="inline-block"
+                
+            }
+            else if (img2.style.display="inline-block"){
+                 img2.style.display="none"
+                 img3.style.display="inline-block"
+            }
+        }
+    </script>
+</body>
+</html>
