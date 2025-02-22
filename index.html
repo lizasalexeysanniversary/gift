@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,9 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    <iframe id="bg-music" width="1" height="1" 
+    src="https://www.youtube.com/embed/kPa7bsKwL-c?autoplay=1&loop=1&playlist=kPa7bsKwL-c" 
+    frameborder="0" allow="autoplay"></iframe>
+
+
+    
     <style>
         body{
-            background-image: url("https://wallpapercat.com/w/full/8/5/0/2154427-3840x2160-desktop-4k-hearts-wallpaper.jpg");
+            background-color: black;
             background-size: cover;  
             background-position: center; 
             background-repeat: repeat;
@@ -23,10 +30,11 @@
             justify-content: center;
             align-items: center;
             height: 50%; 
+            display: none;
         }
         #titel{
-            color: wheat;
-            background-color: black;
+            color: black;
+            background-color: pink;
             border-radius: 5px;
             padding: 20px;
             width: 40vw;
@@ -52,20 +60,20 @@
             border-radius: 10px;
             margin-bottom: 20vh;
         }
-        #img1, #img2, #img3, #img4{
+        #img1, #img2, #img3, #img4, #img5, #img6, #img7{
             display: inline-block;
             border-radius: 10px;
-            width: 43vw;
+            width: fit-content;
             max-height: 60vh;
             border-style: solid;
             border-width: 2px;
             border-color: purple;
             transition: 0.2s;
         }
-        #img2, #img3, #img4{
+        #img2, #img3, #img4, #img5, #img6, #img7{
             display: none;
         }
-        #img1:hover{
+        #img1:hover, #img2:hover, #img3:hover, #img4:hover, #img5:hover, #img6:hover, #img7:hover{
             opacity: 90%;
         }
         #bottomcontainer{
@@ -89,6 +97,7 @@
             color: purple;
             font-size: 20px;
             font-weight: bold;
+            border-radius: 5px;
             transition: 0.1s;
         }
         #btn1:hover, #btn2:hover{
@@ -115,43 +124,198 @@
         #introduction:hover{
             opacity: 90%;
         }
+        #startcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90%;
+            text-align: center; 
+        }
+
+        #startcontent {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 10px; 
+        }
+        #startp{
+            background-color: black;
+            color: gold;
+            font-size: x-large;
+            transition: 0.3s;
+            display: block;
+        }
+        #startp:hover{
+            opacity: 90%;
+        }
+        #babyname{
+            color: purple;
+            transition: 0.3s;
+        }
+        #babyname:hover{
+            color: pink;
+        }
+        #nameliza{
+            color: pink;
+            transition: 0.3s;
+        }
+        #nameliza:hover{
+            color: purple;
+        }
+        #wifecolor{
+            color: wheat;
+            transition: 0.3s;
+        }
+        #wifecolor:hover{
+            color: aqua;
+        }
+        #nextbtn{
+            height: 7vh;
+            width: 10vw;
+            background-color: transparent;
+            border-style: solid;
+            border-color: pink;
+            color: pink;
+            border-width: 1;
+            font-size: large;
+            transition: 0.25s;
+        }
+        #nextbtn:hover{
+            background-color: pink;
+            color: black;
+            cursor: pointer;
+        }
+        #allcontainer{
+            display: none;
+        }
     </style>
+
+
+
+<div id="startcontainer">
+    <div id="startcontent">
+        <p id="startp">Hello <span id="babyname">Elizabete Bojaruneca</span> / <span id="nameliza">Liza</span>, or even better
+          <span id="wifecolor">My Wife</span></p>
+        <button id="nextbtn">Next</button>
+    </div>
+</div>
+
     <div id="maincontainer">
         <p id="titel"> 💍 Liza's & Alexey's Anniversary 💍</p>
     </div>
+
+    <div id="allcontainer">
+
     <div id="imgdiv">
         <button id="btn1"><-</button>
         <img id="img1" src="https://drive.google.com/thumbnail?id=1wmLN1xlg3r48Qbxmcg4XP75HwGgeyVCZ&sz=s500" alt="Anniversary Image">
-        <img id="img2" src="data:image/jpeg;base64,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" alt="Anniversary Image">
-        <img id="img3" src="https://drive.google.com/thumbnail?id=1wmLN1xlg3r48Qbxmcg4XP75HwGgeyVCZ&sz=s500" alt="Anniversary Image">
-        <img id="img4" src="https://drive.google.com/thumbnail?id=1wmLN1xlg3r48Qbxmcg4XP75HwGgeyVCZ&sz=s500" alt="Anniversary Image">
+        <img id="img2" src="https://drive.google.com/thumbnail?id=17qQp03-eDWIWmaSJotMi-cUNU8mBjMa_&sz=s500" alt="Anniversary Image">
+        <img id="img3" src="https://drive.google.com/thumbnail?id=14EHiFtUGtEx5D6KLanK4qTKJXYiKZZgV&sz=s500" alt="Anniversary Image">
+        <img id="img4" src="https://drive.google.com/thumbnail?id=1KRPY-tqxf4u-OmGHAxNlh2WtbgEFYCCs&sz=s500" alt="Anniversary Image">
+        <img id="img5" src="https://drive.google.com/thumbnail?id=1UhGrYe-RvJ2nHauA9sKSXTnylI3R4Uf4&sz=s500" alt="Anniversary Image">
+        <img id="img6" src="https://drive.google.com/thumbnail?id=1jUdt0T2E-FZ9yDWDSF6jHU6EjaJe0IW7&sz=s500" alt="Anniversary Image">
+        <img id="img7" src="https://drive.google.com/thumbnail?id=1PpG_zLgezXPRzOr2G9POQBiU8-gHnvWs&sz=s500" alt="Anniversary Image">
         <button id="btn2">-></button>
+
     </div>
+
     <div id="bottomcontainer">
         <p id="introduction">
          <span id="heart">❤</span>   It has been <span id="yr"> 💍 ONE YEAR 💍</span> <span id="heart">❤</span>
         </p>
     </div>
 
+</div>
     <script>
-        let img2 = document.getElementById("img2")
-        let img3 = document.getElementById("img3")
-        let img4 = document.getElementById("img4")
-        let btn1 = document.getElementById("btn1")
-        let btn2 = document.getElementById("btn2")
-        let img1 = document.getElementById("img1")
+let img1 = document.getElementById("img1");
+let img2 = document.getElementById("img2");
+let img3 = document.getElementById("img3");
+let img4 = document.getElementById("img4");
+let btn1 = document.getElementById("btn1");
+let btn2 = document.getElementById("btn2");
+let nextbtn = document.getElementById("nextbtn")
+let startp = document.getElementById("startp")
+let startcontainer = document.getElementById("startcontainer")
+let maincontainer = document.getElementById("maincontainer")
+let bottomcontainer = document.getElementById("bottomcontainers")
+let allcontainer = document.getElementById("allcontainer")
+document.documentElement.requestFullscreen()
 
-        btn2.onclick = function(){
-            if (img1.style.display="inline-block") {
-                img1.style.display="none"
-                img2.style.display="inline-block"
-                
-            }
-            else if (img2.style.display="inline-block"){
-                 img2.style.display="none"
-                 img3.style.display="inline-block"
-            }
-        }
+let images = [img1, img2, img3, img4, img5, img6, img7]; 
+let currentIndex = 0;
+
+btn2.onclick = function () {
+    images[currentIndex].style.display = "none"; 
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].style.display = "inline-block"; 
+};
+
+btn1.onclick = function () {
+    images[currentIndex].style.display = "none"; 
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    images[currentIndex].style.display = "inline-block";
+};
+let texts = [
+    "Hello Elizabete Bojaruneca / Liza, or even better My Wife",
+    "It's March 3rd, and you know what that means",
+    "it has been One Year My Liza :)",
+    "Even though we're not together right now, I'm proud of how far we've come together",
+    "I've never had a deeper connection with anyone like with you",
+    "And it's not just that",
+    "What makes this connection special to me is that",
+    "I love you, and I love spending my day with you :)",
+    "You keep telling me to find my purpose in life",
+    "And you don't like it when I say that you're my purpose",
+    "The truth is that",
+    "I already found my purpose",
+    "I love going to the gym, and that's my purpose I guess",
+    "But a purpose in life isn't one thing",
+    "My purpose is to become a bodybuilder",
+    "That has the most beautiful loving wife",
+    "With the most beautiful loving Children :)",
+    "I had the best beautiful baby Wife",
+    "The most loving,",
+    "The most loyal,",
+    "The most caring,",
+    "The one with the most beautiful voice ever,",
+    "With beautiful mouth sounds that always fooled me,",
+    "The best minecraft building skills,",
+    "The best lying skills in Among Us when you're the imposter,",
+    "'I'm Crewmate' Yeahh SURE YOU ARE 🤣🤣",
+    "The most sexiest and hottest,",
+    "The tastiest baby,",
+    "And the most tastiest hair,",
+    "With the most tastiest pussy,",
+    "With the most beautiful shining eyes,",
+    "With such a beautiful Name and last name that fits mine so well",
+    "I love you so much Elizabete Bojaruneca :)",
+    "I took my time to code something for you,",
+    "To show that I care about our Anniversary,",
+    "And that you mean the world to me liza the biza",
+    "Enough said, after you click next right now,",
+    "There will be a Button to play music,",
+    "So be warned and turn down your volume if you have it at full,",
+    "So, When you're ready, Click next :)"
+];
+let index = 0;
+let audio = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/song.mp3"); 
+
+nextbtn.onclick = function() {
+    index = (index + 1) % texts.length;
+    startp.innerHTML = texts[index];
+
+    if (startp.innerHTML == "It's March 3rd, and you know what that means") {
+        startcontainer.style.display = "none";
+        document.body.style.backgroundImage = "url('https://wallpapercat.com/w/full/8/5/0/2154427-3840x2160-desktop-4k-hearts-wallpaper.jpg')";
+        audio.play();
+        
+        setTimeout(() => {
+            maincontainer.style.display = "flex";
+            allcontainer.style.display="inline";
+        }, 50); 
+    }
+};
+
     </script>
 </body>
 </html>
