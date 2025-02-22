@@ -13,7 +13,7 @@
     <style>
         body{
             background-color: black;
-            background-size: cover;  
+            background-size: auto;  
             background-position: center; 
             background-repeat: repeat;
             font-family:'Courier New', Courier, monospace;
@@ -21,6 +21,8 @@
             user-select: none;
             height: 100%; 
             background-color: black;
+            justify-content: center;
+            align-items: center;
         }
         #maincontainer{
             text-align: center;
@@ -45,6 +47,10 @@
         }
         #titel:hover{
             opacity: 90%;
+            color: gold;
+            border-color: white;
+            background-color: black;
+            cursor: pointer;
         }
         #heart{
             color: red;
@@ -65,14 +71,16 @@
             max-height: 60vh;
             border-style: solid;
             border-width: 2px;
-            border-color: purple;
+            border-color: pink;
             transition: 0.2s;
         }
         #img2, #img3, #img4, #img5, #img6, #img7{
             display: none;
         }
         #img1:hover, #img2:hover, #img3:hover, #img4:hover, #img5:hover, #img6:hover, #img7:hover{
+            cursor: pointer;
             opacity: 90%;
+            border-color: purple;
         }
         #bottomcontainer{
             height: 100%;
@@ -106,6 +114,10 @@
         #yr{
             color: gold;
             font-family:'Times New Roman', Times, serif;
+            transition: 0.3s;
+        }
+        #yr:hover{
+            color: aqua;
         }
         #introduction{
             background-color: black;
@@ -116,11 +128,17 @@
             padding: 20px;
             font-size: 20px;
             margin-top: -76.5vh;
+            border-style: solid;
+            border-color: white;
             transition: 0.2s;
             user-select: none;
         }
         #introduction:hover{
             opacity: 90%;
+            color: purple;
+            background-color: pink;
+            border-color: black;
+            cursor: pointer;
         }
         #startcontainer {
             display: flex;
@@ -186,6 +204,27 @@
         #allcontainer{
             display: none;
         }
+        #textromance{
+            background-color: transparent;
+            height: auto;
+            width: 90%;
+            position: relative;
+            display: flex;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            flex-direction: column;
+            margin-top: -83vh;
+            color: goldenrod;
+            font-family: 'Times New Roman', Times, serif;
+            border-style: solid;
+            border-radius: 10px;
+            border-color: white;
+            background-color: gray;
+            text-align: start;
+            padding: 20px;
+            padding-left: 50px;
+        }
     </style>
 
 
@@ -222,7 +261,19 @@
          <span id="heart">❤</span>   It has been <span id="yr"> 💍 ONE YEAR 💍</span> <span id="heart">❤</span>
         </p>
     </div>
-
+    <div id="textromance">
+        <p id="paragraphromance">
+            My dear Elizabete Bojaruneca, <br><br>
+            My lovely girl, it has been One Year 😍🥰😘 <br> I can't believe that I spent an entire 
+            year with YOUUU liza 🥰 <br>
+            literaly a DREAM😍 <br> You're so good smelling and tasty my liza biza I love you so much <br>
+            Since day 1 all I could ever think of was you <br>
+            I love everything about you liza, <br>
+            Your beautiful loving shiny eyes, Your beautiful taste of your pussy, <br>
+            I love your smell so much and your tasty beautiful hair gosh 😍😍 <br>
+            You're the perfect woman my liza, you're the most loyal and perfect girl I've ever met!
+        </p>
+    </div>
 </div>
     <script>
 let img1 = document.getElementById("img1");
@@ -302,11 +353,11 @@ nextbtn.onclick = function() {
     index = (index + 1) % texts.length;
     startp.innerHTML = texts[index];
 
-    if (startp.innerHTML == "It's March 3rd, and you know what that means") {
+    if (startp.innerHTML == "So, When you're ready, Click next :)") {
         startcontainer.style.display = "none";
         document.body.style.backgroundImage = "url('https://wallpapercat.com/w/full/8/5/0/2154427-3840x2160-desktop-4k-hearts-wallpaper.jpg')";
+    
         audio.play();
-        
         setTimeout(() => {
             maincontainer.style.display = "flex";
             allcontainer.style.display="inline";
