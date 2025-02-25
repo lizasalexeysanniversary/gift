@@ -443,6 +443,7 @@ let container = document.getElementById("container");
 let contnue = document.getElementById("continue");
 let startsong = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/startsong.mp3");
 let melody = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/melody.mp3");
+let landinggreet = document.getElementById("landinggreet");
 let continuetwo = document.getElementById("continue2");
 
 
@@ -571,6 +572,15 @@ nextbtn.onclick=function(){
         audio.play();
     }
 }
+window.addEventListener('DOMContentLoaded', function () {
+    if (!/Mobi|Android|iPhone|iPod/i.test(navigator.userAgent) || /iPad/i.test(navigator.userAgent)) {
+       contnue.style.display="none";
+       landinggreet.innerHTML="Sorry, This isnt available for PC! Only for phone, my silly baby Liza 😋🥰🥰🥰";
+       landinggreet.style.width="50vw";
+       landinggreet.style.fontSize="2vw"
+    }
+});
+
     </script>
 </body>
 </html>
