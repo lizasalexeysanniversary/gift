@@ -148,7 +148,9 @@
             gap: 10px; 
         }
         #startp{
-            background-color: black;
+            background-color: rgb(0, 0, 0, 0.75);
+            border-radius: 1vw;
+
             color: gold;
             font-size: x-large;
             transition: 0.3s;
@@ -181,18 +183,13 @@
         #nextbtn{
             height: 7vh;
             width: 50vw;
-            background-color: transparent;
+            background-color: pink;
             border-style: solid;
             border-color: pink;
-            color: pink;
+            color: black;
             border-width: 1;
             font-size: large;
             transition: 0.25s;
-        }
-        #nextbtn:hover{
-            background-color: pink;
-            color: black;
-            cursor: pointer;
         }
         #textromance{
             background-color: transparent;
@@ -309,14 +306,40 @@
             display: block;
             display: none;
         }
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; 
+            z-index: -1; 
+        }
+
+
+        .content {
+            position: relative;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            z-index: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            backdrop-filter: blur(5px);
+        }
+
     </style>
     <div id="landingpage">
         <p id="landinggreet">
+            HEADPHONES RECOMENDED! <br> <br>
             Hello Liza! You have officially landed on this website successfully!
             You can now proceed!
         </p>
         <button id="continue">
-            Enter Website
+            Continue
         </button>
     </div>
 <div id="container">
@@ -346,11 +369,18 @@
  
 
 <div id="startcontainer">
-    <div id="startcontent">
-        <p id="startp">Hello <span id="babyname">Elizabete Bojaruneca</span> / <span id="nameliza">Liza</span>, or even better
-          <span id="wifecolor">My Wife</span></p>
-        <button id="nextbtn">Next</button>
-    </div>
+        <!-- Background Video -->
+        <video autoplay muted loop id="background-video">
+            <source src="https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/videoliza.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div id="startcontent">
+            <p id="startp">Hello <span id="babyname">Elizabete Bojaruneca</span> / <span id="nameliza">Liza</span>, or even better
+              <span id="wifecolor">My Wife</span></p>
+            <button id="nextbtn">Next</button>
+        </div>
+    
 </div>
 
     <div id="maincontainer">
@@ -412,13 +442,20 @@ let landingpage = document.getElementById("landingpage");
 let container = document.getElementById("container");
 let contnue = document.getElementById("continue");
 let startsong = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/startsong.mp3");
-let continuetwo = document.getElementById("continue2") 
+let melody = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/melody.mp3");
+let continuetwo = document.getElementById("continue2");
 
 
 contnue.onclick = function () {
     landingpage.style.display = "none";
     container.style.display = "block";
-    startsong.play();
+    melody.play();
+
+    melody.addEventListener("ended", function () {
+        this.currentTime = 0;
+        this.play();
+    });
+
     let paragraphs = document.querySelectorAll("#firstdiv p"); 
     let delay = 100; 
 
@@ -431,7 +468,10 @@ contnue.onclick = function () {
         }, index * delay);
     });
 };
+
 continuetwo.onclick=function(){
+    melody.pause();
+    startsong.play()
     container.style.display="none";
     startcontainer.style.display="flex";
     document.body.style.backgroundColor="black";
