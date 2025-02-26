@@ -56,7 +56,9 @@
             margin-bottom: 20vh;
             margin-top: -15vh;
         }
-        #img1, #img2, #img3, #img4, #img5, #img6, #img7{
+        #img1, #img2, #img3, #img4, #img5, #img6, #img7,
+        #img8, #img9, #img10, #img11, #img12, #img13, #img14
+        {
             display: inline-block;
             border-radius: 10px;
             width: fit-content;
@@ -66,10 +68,14 @@
             border-color: pink;
             transition: 0.2s;
         }
-        #img2, #img3, #img4, #img5, #img6, #img7{
+        #img2, #img3, #img4, #img5, #img6, #img7,
+        #img8, #img9, #img10, #img11, #img12, #img13, #img14
+        {
             display: none;
         }
-        #img1:hover, #img2:hover, #img3:hover, #img4:hover, #img5:hover, #img6:hover, #img7:hover{
+        #img1:hover, #img2:hover, #img3:hover, #img4:hover, #img5:hover, #img6:hover, #img7:hover,
+        #img8:hover, #img9:hover, #img10:hover, #img11:hover, #img12:hover, #img13:hover, #img14:hover
+        {
             cursor: pointer;
             opacity: 90%;
             border-color: purple;
@@ -98,7 +104,7 @@
             border-radius: 5px;
             transition: 0.1s;
         }
-        #btn1:hover, #btn2:hover{
+        #btn1:hover{
             cursor: pointer;
             background-color: purple;
             color: pink;
@@ -191,7 +197,7 @@
             font-size: large;
             transition: 0.25s;
         }
-        #textromance{
+        #textromance, #songdiv{
             background-color: transparent;
             height: auto;
             width: 65%;
@@ -201,16 +207,19 @@
             left: 50%;
             transform: translate(-50%, -50%);
             flex-direction: column;
-            color: goldenrod;
-            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             border-style: solid;
             border-radius: 10px;
-            border-color: white;
-            background-color: gray;
+            border-color: black;
+            background-color: pink;
             text-align: start;
             padding: 50px;
             padding-left: 50px;
-            margin-top: -40vh;
+            margin-top: 40vh;
+        }
+        #songdiv{
+            margin-top: -82782332783287%;
         }
         #firstdiv,
         #seconddiv
@@ -297,10 +306,10 @@
         #maincontainer{
             text-align: center;
             display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
             height: 50%; 
-            display: none;
         }
         #allcontainer{
             display: block;
@@ -330,7 +339,36 @@
             height: 100vh;
             backdrop-filter: blur(5px);
         }
-
+        #songdiv{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: -70vh;
+            font-size: 4vw;
+            
+        }
+        #playsongbtn{
+            width: 50%;
+            height: 5vh;
+            border-style: none;
+            background-color: black;
+            color: white;
+        }
+        #nameliza2{
+            color: purple;
+        }
+        #country{
+            color: brown;
+        }
+        #myname{
+            color: blue;
+        }
+        #timer{
+            color: goldenrod;
+            font-size: 5vw;
+        }
     </style>
     <div id="landingpage">
         <p id="landinggreet">
@@ -397,6 +435,13 @@
         <img id="img5" src="https://drive.google.com/thumbnail?id=1UhGrYe-RvJ2nHauA9sKSXTnylI3R4Uf4&sz=s500" alt="Anniversary Image">
         <img id="img6" src="https://drive.google.com/thumbnail?id=1jUdt0T2E-FZ9yDWDSF6jHU6EjaJe0IW7&sz=s500" alt="Anniversary Image">
         <img id="img7" src="https://drive.google.com/thumbnail?id=1PpG_zLgezXPRzOr2G9POQBiU8-gHnvWs&sz=s500" alt="Anniversary Image">
+        <img id="img8" src="https://drive.google.com/thumbnail?id=1IjPZUpRdUDgir_wofkrIqs0ruIVPNTON&sz=s500" alt="Anniversary Image">
+        <img id="img9" src="https://drive.google.com/thumbnail?id=1L327VkqRHvfK4s-35bPDaj9vEV8CSAnY&sz=s500" alt="Anniversary Image">
+        <img id="img10" src="https://drive.google.com/thumbnail?id=1lXmLRXK50yCIASdi7TBAzkevmbG5yelp&sz=s500" alt="Anniversary Image">
+        <img id="img11" src="https://drive.google.com/thumbnail?id=1axs9J8-xEV322Tsw4ahh6RMAr_ikrI5R&sz=s500" alt="Anniversary Image">
+        <img id="img12" src="https://drive.google.com/thumbnail?id=1cqkJTfFuYykF_UR6gPeXKnN8mdkzeLka&sz=s500" alt="Anniversary Image">
+        <img id="img13" src="https://drive.google.com/thumbnail?id=1ahngEEdCAYSToQMfSPivfLWutl_CUUR6&sz=s500" alt="Anniversary Image">
+        <img id="img14" src="https://drive.google.com/thumbnail?id=1tsvurKhfh58T6xw-e8D8Drmbm8WEnlbh&sz=s500" alt="Anniversary Image">
         <button id="btn2">Next Image!</button>
 
     </div>
@@ -416,10 +461,36 @@
             I love everything about you liza, <br>
             Your beautiful loving shiny eyes, Your beautiful taste of your pussy, <br>
             I love your smell so much and your tasty beautiful hair gosh 😍😍 <br>
-            You're the perfect woman my liza, you're the most loyal and perfect girl I've ever met!
+            You're the perfect woman my liza, you're the most loyal and perfect girl I've ever met! <br>
+            I love you so much my cute sweet perfect lady baby girl that just makes the perfect mouth sounds <br>
+            In the world! I love your cute mouth sounds so much and your among us skills are so cute <br>
+            And your beautiful minecraft skills mwaaa I love the beautiful house you made me in our love city <br>
+            Remember our store where you put 'Alexeys arms for liza only' 😂 <br>
+            And I put Piena speks next to it, or that one tunnel you made that were filled with signs where <br>
+            you Complimented me and all those love signs were so cute 😍😍 <br>
+            You're my dream wife, girl, lady, woman, mother, cat mom, everything 😍😍 <br>
+            I fell asleep to the video where you pet your cat and there was this one spot where you breathed loudly,
+            and it turned me on so much because you were breathing right in my ear, I was thinking, Omg, lizas beautiful 
+            breath in my ear and I felt it and it was so cute and sweet I was so tired from hours of coding I couldnt
+            move but I wanted to jack off to it 😭😭 I jerked it few times and almost cummed, then I turned on my stomach
+            and fucked my mattres while hugging my pillow and pretending that it's you
+            Then I fell asleep and I wke up multiple times at night, And I loved your breathing so much That 
+            whenever I woke up I waited until your breathing comes again, and when It came I breathed like you 
+            and It was the best sleep I've ever gotten my liza I love you so much I want you all over me my cute baby 
+            I want your entire DNA inside of my mouth I want your tasty beautiful spit and lick your skin and your face
+            and your hands and your feet and your legs and arms and your beautiful tasty sweet back and your whole body 
+            I want to lick you behind your beautiful ears to lick you clean I want all of you my liza 
+            I love you so much 😍😋😋 <br> <br>
+            Happy Anniversary my Love, My wife, My girl, My lady, My woman, My World, My everything, My Liza, My Bojaruneca MY Whole world 😍🥰😋
         </p>
     </div>
-
+    <div id="songdiv">
+    <p> <span id="nameliza2">Liza's</span> <span id="country">Latvian</span> Song - By <span id="myname">Alexey</span></p>
+    <p id="timer">
+        2:45
+    </p>
+    <button id="playsongbtn">Play Song</button>
+    </div>
 </div>
     <script>
 let img1 = document.getElementById("img1");
@@ -436,7 +507,7 @@ let bottomcontainer = document.getElementById("bottomcontainers");
 let allcontainer = document.getElementById("allcontainer");
 document.documentElement.requestFullscreen();
 let typingSound = document.getElementById("typingSound");
-let images = [img1, img2, img3, img4, img5, img6, img7]; 
+let images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14]; 
 let currentIndex = 0;
 let landingpage = document.getElementById("landingpage");
 let container = document.getElementById("container");
@@ -445,7 +516,8 @@ let startsong = new Audio("https://raw.githubusercontent.com/lizasalexeysanniver
 let melody = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/melody.mp3");
 let landinggreet = document.getElementById("landinggreet");
 let continuetwo = document.getElementById("continue2");
-
+let lizasong = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/lizassong.mp3");
+let playsongbtn = document.getElementById("playsongbtn");
 
 contnue.onclick = function () {
     landingpage.style.display = "none";
@@ -517,7 +589,7 @@ let texts = [
     "With beautiful mouth sounds that always fooled me,",
     "The best minecraft building skills,",
     "The best lying skills in Among Us when you're the imposter,",
-    "'I'm Crewmate' Yeahh SURE YOU ARE 🤣🤣",
+    "'I'm Crewmate' Yeahh SURE YOU ARE You beautiful silly baby",
     "The most sexiest and hottest,",
     "The tastiest baby,",
     "And the most tastiest hair,",
@@ -534,7 +606,7 @@ let texts = [
     "And that you mean the world to me liza the biza",
     "Enough said my baby",
     "So, When you're ready, Click next :)",
-    "Awaiting user input..."
+    "."
 ];
 let index = 0;
 let audio = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/song.mp3"); 
@@ -563,7 +635,7 @@ nextbtn.onclick=function(){
     index = (index+1) % texts.length;
     typeText(startp, texts[index]);
     
-    if(texts[index]==="Awaiting user input..."){
+    if(texts[index]==="."){
         startcontainer.style.display="none";
         startsong.pause()
         document.body.style.backgroundImage="url('https://wallpapercat.com/w/full/8/5/0/2154427-3840x2160-desktop-4k-hearts-wallpaper.jpg')";
@@ -572,6 +644,47 @@ nextbtn.onclick=function(){
         audio.play();
     }
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const playSongBtn = document.getElementById("playsongbtn");
+    const timerDisplay = document.getElementById("timer");
+    let countdown;
+    let timeLeft = 165; 
+
+    function startCountdown() {
+        clearInterval(countdown);
+        timeLeft = 165; 
+        updateTimerDisplay(timeLeft);
+
+        countdown = setInterval(() => {
+            timeLeft--;
+            updateTimerDisplay(timeLeft);
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                playSongBtn.textContent = "Play Song"; 
+                lizasong.pause(); 
+                lizasong.currentTime = 0; 
+            }
+        }, 1000);
+    }
+
+    function updateTimerDisplay(seconds) {
+        let minutes = Math.floor(seconds / 60);
+        let secs = seconds % 60;
+        timerDisplay.textContent = `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
+    }
+
+    playSongBtn.addEventListener("click", function () {
+        if (playSongBtn.textContent === "Play Song") {
+            playSongBtn.textContent = "Playing...";
+            audio.pause();
+            lizasong.play(); 
+            startCountdown();
+        }
+    });
+
+    updateTimerDisplay(timeLeft); 
+});
 window.addEventListener('DOMContentLoaded', function () {
     if (!/Mobi|Android|iPhone|iPod/i.test(navigator.userAgent) || /iPad/i.test(navigator.userAgent)) {
        contnue.style.display="none";
