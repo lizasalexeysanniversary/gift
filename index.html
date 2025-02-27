@@ -544,7 +544,7 @@
             </div>
         </div>
         <div id="textbox">
-            <input id="messagebox" type="text" placeholder="Message" readonly>
+            <input id="messagebox" type="text" placeholder="Message">
             <button id="sendbtn">Send</button>
         </div>
     </div>
@@ -750,6 +750,10 @@ playmission.onclick=function(){
     document.getElementById("mission").style.display="flex";
     document.body.style.display="flex";
 }
+
+document.getElementById("textbox").addEventListener("focus", function(event) {
+    event.preventDefault();  // Prevent focus and keyboard from appearing
+  });
     </script>
 </body>
 </html>
