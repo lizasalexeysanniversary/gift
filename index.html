@@ -752,7 +752,7 @@ playmission.onclick=function(){
 }
 
 document.getElementById("textbox").addEventListener("focus", function(event) {
-    event.preventDefault();  // Prevent focus and keyboard from appearing
+    this.blur();  // Immediately remove focus from the input
   });
     </script>
 </body>
