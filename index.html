@@ -17,7 +17,7 @@
     <style>
         body{
 
-            background-color: white;
+            background-color: pink;
             background-size: auto;  
             background-position: center; 
             background-repeat: repeat;
@@ -27,6 +27,7 @@
             height: 100%; 
             justify-content: center;
             align-items: center;
+            display: flex;
         }
         #titel{
             color: black;
@@ -299,23 +300,6 @@
         border-color: blueviolet;
         color: wheat;    
         }
-        #landingpage{
-            display: flex;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #maincontainer{
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50%; 
-        }
-        #allcontainer{
-            display: block;
-        }
         #background-video {
             position: fixed;
             top: 0;
@@ -348,7 +332,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: -130%;
+            margin-top: -160%;
             font-size: 4vw;
             
         }
@@ -376,145 +360,193 @@
             font-size: 5vw;
         }
         #mission{
-            display: none;
+            display: block;
             justify-content: center;
             align-items: center;
             text-align: center;
             flex-direction: column;
             background-image: url("https://i.redd.it/ts7vuoswhwf41.jpg");
-            height: 50%;
+            height: 80%;
+            width: 90%;
+            border-style: solid;
+            border-color: black;
+            overflow: hidden;
+            border-width: 1vw;
+            border-radius: 5vh;
+        }
+        #landingpage{
+            display: flex;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #maincontainer{
+            text-align: center;
+            display: flex;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 50%; 
+        }
+        #allcontainer{
+            display: block;
+            display: none;
+        }
+        #top{
+            width: 91%;
+            height: 5%;
+            border-top-right-radius: 5vh;
+            border-top-left-radius: 5vh;
+            background-color: black;
+            justify-content: start;
+            align-items: start;
+            display: flex;
+            text-align: start;
+            padding: 2vh;
+            padding-top: 2vh;
+            color: white;
+            flex-direction: row;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #imgs{
+            border-radius: 100vh;
+            width: 12vw;
+            height: 5vh;
+        }
+        #contact{
+            padding-left: 4vw;
+            margin-top: 0.9vh;
+        }
+        #dots{
+            margin-left: auto; 
+            font-size: 2.1vw;
+            font-weight: bolder;
+        }
+        #messagediv{
+            scrollbar-width: none;
+            font-family:Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: larger;
+            display: flex;
+            text-align: end;
+            align-items: end;
+            padding: 5vh;
+            padding-right: 3vw;
+            flex-direction: column;
+            background-color: transparent;
+            overflow-y: hidden;
+            overflow-y: scroll;
+            scrollbar-color: transparent;
+            justify-content: space-between;
+            height: 25vh;
+            max-height: 25vh;
+            background-color: black;
+
+        }
+        #messagesliza1,
+        #messagesliza2,
+        #messagesliza3,
+        #messagesliza4,
+        #messagesalex1
+        {
+            background-color: red;
+            border-radius: 2vw;
+            height: auto;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            font-size: 5vw;
+            text-align: start;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin: 0.5vh;
+            display: none;
+        }
+        #messagesalex1{
+            display: flex;
+            background-color: gray;
+            text-align: start;
+            width: 70vw;
+            margin-right: 5vw;
+            display: none;
+        }
+        #textbox{
+            background-color: transparent;
+            width: 100%;
+            height:9%;
+            display: flex;
+            justify-content: start;
+            background-color: transparent;
+            flex-direction: row;
+            padding: 2vw;
+        }
+        #messagebox{
+            height: 80%;
             width: 80%;
+            border-radius: 10vw;
+            border-style: none;
+            background-color: gray;
+            color: white;
+            padding-left: 4vw;
+            outline: none;
+            font-size: 5vw;
+        }
+        input::placeholder{
+            color: rgb(206, 206, 206);
+        }
+        #sendbtn{
+            width: 13vw;
+            height: 5vh;
+            margin-left: 1vw;
+            margin-top: 0.3vh;
+            border-style: none;
+            background-color: lightgreen;
+            color: black;
+            font-weight: bold;
+            border-radius: 10vw;
         }
     </style>
-    <div id="landingpage">
-        <p id="landinggreet">
-            HEADPHONES RECOMENDED! <br> <br>
-            Hello Liza! You have officially landed on this website successfully!
-            You can now proceed!
-        </p>
-        <button id="continue">
-            Continue
-        </button>
-    </div>
-<div id="container">
-<div id="firstdiv">
-    <p id="greet">
-        Well hello there liza! 😋 
-        <br>Happy Anniversary My love! 
-    </p>
-    <p id="greet">
-        I love you so much my beautiful wife ❤❤ <br>
-    </p>
-    <p id="greet">
-        You are the best thing that has ever happened to me my baby <br>
-    </p>
-    <p id="greet">
-        Gosh how are you this tasty????<br>
-    </p>
-    <p id="greet">
-        Can I lick your tasty hot pussy for hours<br>
-    </p>
-    <p id="greet">
-        You are the most beautiful girl I have ever laid my eyes on<br>
-    </p>
-    <button id="continue2">Continue</button>
-        </div>
-     </div>
- 
-
-<div id="startcontainer">
-        <video autoplay muted loop id="background-video">
-            <source src="https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/videoliza.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <div id="startcontent">
-            <p id="startp">Hello <span id="babyname">Elizabete Bojaruneca</span> / <span id="nameliza">Liza</span>, or even better
-              <span id="wifecolor">My Wife</span></p>
-            <button id="nextbtn">Next</button>
-        </div>
-    
-</div>
-
-    <div id="maincontainer">
-        <p id="titel"> 💍 Liza's & Alexey's Anniversary 💍</p>
-    </div>
-
-    <div id="allcontainer">
-
-    <div id="imgdiv">
-        <img id="img1" src="https://drive.google.com/thumbnail?id=1wmLN1xlg3r48Qbxmcg4XP75HwGgeyVCZ&sz=s500" alt="Anniversary Image">
-        <img id="img2" src="https://drive.google.com/thumbnail?id=17qQp03-eDWIWmaSJotMi-cUNU8mBjMa_&sz=s500" alt="Anniversary Image">
-        <img id="img3" src="https://drive.google.com/thumbnail?id=14EHiFtUGtEx5D6KLanK4qTKJXYiKZZgV&sz=s500" alt="Anniversary Image">
-        <img id="img4" src="https://drive.google.com/thumbnail?id=1KRPY-tqxf4u-OmGHAxNlh2WtbgEFYCCs&sz=s500" alt="Anniversary Image">
-        <img id="img5" src="https://drive.google.com/thumbnail?id=1UhGrYe-RvJ2nHauA9sKSXTnylI3R4Uf4&sz=s500" alt="Anniversary Image">
-        <img id="img6" src="https://drive.google.com/thumbnail?id=1jUdt0T2E-FZ9yDWDSF6jHU6EjaJe0IW7&sz=s500" alt="Anniversary Image">
-        <img id="img7" src="https://drive.google.com/thumbnail?id=1PpG_zLgezXPRzOr2G9POQBiU8-gHnvWs&sz=s500" alt="Anniversary Image">
-        <img id="img8" src="https://drive.google.com/thumbnail?id=1IjPZUpRdUDgir_wofkrIqs0ruIVPNTON&sz=s500" alt="Anniversary Image">
-        <img id="img9" src="https://drive.google.com/thumbnail?id=1L327VkqRHvfK4s-35bPDaj9vEV8CSAnY&sz=s500" alt="Anniversary Image">
-        <img id="img10" src="https://drive.google.com/thumbnail?id=1lXmLRXK50yCIASdi7TBAzkevmbG5yelp&sz=s500" alt="Anniversary Image">
-        <img id="img11" src="https://drive.google.com/thumbnail?id=1axs9J8-xEV322Tsw4ahh6RMAr_ikrI5R&sz=s500" alt="Anniversary Image">
-        <img id="img12" src="https://drive.google.com/thumbnail?id=1cqkJTfFuYykF_UR6gPeXKnN8mdkzeLka&sz=s500" alt="Anniversary Image">
-        <img id="img13" src="https://drive.google.com/thumbnail?id=1ahngEEdCAYSToQMfSPivfLWutl_CUUR6&sz=s500" alt="Anniversary Image">
-        <img id="img14" src="https://drive.google.com/thumbnail?id=1tsvurKhfh58T6xw-e8D8Drmbm8WEnlbh&sz=s500" alt="Anniversary Image">
-        <button id="btn2">Next Image!</button>
-
-    </div>
-    <audio id="typingSound" src="https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/typing.mp3" preload="auto"></audio>
-    <div id="bottomcontainer">
-        <p id="introduction">
-         <span id="heart">❤</span>   It has been <span id="yr"> 💍 ONE YEAR 💍</span> <span id="heart">❤</span>
-        </p>
-    </div>
-    <div id="textromance">
-        <p id="paragraphromance">
-            My dear Elizabete Bojaruneca, <br><br>
-            My lovely girl, it has been One Year 😍🥰😘 <br> I can't believe that I spent an entire 
-            year with YOUUU liza 🥰 <br>
-            literaly a DREAM😍 <br> You're so good smelling and tasty my liza biza I love you so much <br>
-            Since day 1 all I could ever think of was you <br>
-            I love everything about you liza, <br>
-            Your beautiful loving shiny eyes, Your beautiful taste of your pussy, <br>
-            I love your smell so much and your tasty beautiful hair gosh 😍😍 <br>
-            You're the perfect woman my liza, you're the most loyal and perfect girl I've ever met! <br>
-            I love you so much my cute sweet perfect lady baby girl that just makes the perfect mouth sounds <br>
-            In the world! I love your cute mouth sounds so much and your among us skills are so cute <br>
-            And your beautiful minecraft skills mwaaa I love the beautiful house you made me in our love city <br>
-            Remember our store where you put 'Alexeys arms for liza only' 😂 <br>
-            And I put Piena speks next to it, or that one tunnel you made that were filled with signs where <br>
-            you Complimented me and all those love signs were so cute 😍😍 <br>
-            You're my dream wife, girl, lady, woman, mother, cat mom, everything 😍😍 <br>
-            I fell asleep to the video where you pet your cat and there was this one spot where you breathed loudly,
-            and it turned me on so much because you were breathing right in my ear, I was thinking, Omg, lizas beautiful 
-            breath in my ear and I felt it and it was so cute and sweet I was so tired from hours of coding I couldnt
-            move but I wanted to jack off to it 😭😭 I jerked it few times and almost cummed, then I turned on my stomach
-            and fucked my mattres while hugging my pillow and pretending that it's you
-            Then I fell asleep and I wke up multiple times at night, And I loved your breathing so much That 
-            whenever I woke up I waited until your breathing comes again, and when It came I breathed like you 
-            and It was the best sleep I've ever gotten my liza I love you so much I want you all over me my cute baby 
-            I want your entire DNA inside of my mouth I want your tasty beautiful spit and lick your skin and your face
-            and your hands and your feet and your legs and arms and your beautiful tasty sweet back and your whole body 
-            I want to lick you behind your beautiful ears to lick you clean I want all of you my liza 
-            I love you so much 😍😋😋 <br> <br>
-            Happy Anniversary my Love, My wife, My girl, My lady, My woman, My World, My everything, My Liza, My Bojaruneca MY Whole world 😍🥰😋
-        </p>
-    </div>
-    
-    <div id="songdiv">
-    <p> <span id="nameliza2">Liza's</span> <span id="country">Latvian</span> Song - By <span id="myname">Alexey</span></p>
-    <p id="timer">
-        2:45
-    </p>
-    <button id="playsongbtn">Play Song</button>
-    </div>
-
-    <div id="acceptmission">
-        <p>e</p>
-    </div>
-
-</div>
     <div id="mission">
-        
+        <div id="top">
+            <img id="imgs" src="https://drive.google.com/thumbnail?id=1gLDB-gq9Sxa9ZSkSGcTAOmA78fCoBiA-&sz=s50" alt="">
+            <p id="contact">Alexey <span id="heart">❤</span>💍
+            <br> Online
+            </p>
+            <p id="dots">
+                . <br>. <br>.
+            </p>
+            
+        </div>
+
+        <div id="messagediv">
+
+            <div id="messagesliza1">
+                <p>Alexey come here</p>
+            </div>
+            <div id="messagesliza2">
+                <p>Theres someone following me</p>
+            </div>
+            <div id="messagesliza3">
+                <p>Alexey!!!!</p>
+            </div>
+            <div id="messagesliza4">
+                <p>ALEX HE TOUCHED ME AND RAN AWAY WTF????</p>
+            </div>
+            <div id="messagesalex1">
+                <p>LIZA?? WHAT HAPPENED?</p>
+            </div>
+            <div id="messagesalex1">
+                <p>WHAT THE FUCK</p>
+            </div>
+            <div id="messagesalex1">
+                <p>ARE YOU OKAY???</p>
+            </div>
+        </div>
+        <div id="textbox">
+            <input id="messagebox" type="text" placeholder="Message">
+            <button id="sendbtn">Send</button>
+        </div>
     </div>
     <script>
 let img1 = document.getElementById("img1");
@@ -542,6 +574,8 @@ let landinggreet = document.getElementById("landinggreet");
 let continuetwo = document.getElementById("continue2");
 let lizasong = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/lizassong.mp3");
 let playsongbtn = document.getElementById("playsongbtn");
+let playmission = document.getElementById("playmission");
+let acceptmission = document.getElementById("acceptmission");
 
 contnue.onclick = function () {
     landingpage.style.display = "none";
@@ -709,7 +743,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateTimerDisplay(timeLeft); 
 });
-
+playmission.onclick=function(){
+    allcontainer.style.display="none";
+    maincontainer.style.display="none";
+    document.body.backgroundColor="pink";
+    document.getElementById("mission").style.display="flex";
+    document.body.style.display="flex";
+}
     </script>
 </body>
 </html>
