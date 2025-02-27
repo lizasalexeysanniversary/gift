@@ -26,6 +26,7 @@
             height: 100%; 
             justify-content: center;
             align-items: center;
+            display: flex;
         }
         #titel{
             color: black;
@@ -382,15 +383,18 @@
         #maincontainer{
             text-align: center;
             display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
             height: 50%; 
         }
         #allcontainer{
             display: block;
+            display: none;
         }
         #top{
-            width: 91%;
+            width: 95%;
+            margin-top: -0.5vh;
             height: 5%;
             border-top-right-radius: 5vh;
             border-top-left-radius: 5vh;
@@ -421,7 +425,7 @@
         }
         #mission{
             display: flex;
-            display: none;
+
         }
         #messagediv{
             scrollbar-width: none;
@@ -434,12 +438,11 @@
             padding: 5vh;
             padding-right: 3vw;
             flex-direction: column;
-            background-color: transparent;
             overflow-y: hidden;
             overflow-y: scroll;
             scrollbar-color: transparent;
             justify-content: space-between;
-            height: 48vh;
+            height: 75vh;
             background-color: transparent;
 
         }
@@ -487,11 +490,15 @@
             background-color: gray;
             text-align: start;
             width: 70vw;
-            margin-right: 15vw;
+            margin-right: 10vw;
             display: none;
             text-align: start;
             align-items: start;
             justify-content: start;
+        }
+        #mission{
+            height: 95%;
+            width: 95%;
         }
         #textbox{
             width: 100%;
@@ -715,10 +722,10 @@
             <p>Theres someone following me</p>
         </div>
         <div id="messagesliza3">
-            <p>Alexey!!!!</p>
+            <p>Alexey</p>
         </div>
         <div id="messagesliza4">
-            <p>ALEX HE TOUCHED ME AND RAN AWAY WTF????</p>
+            <p>ALEX HE TOUCHED ME AND RAN AWAY WTF</p>
         </div>
         <div id="messagesalex1">
             <p>LIZA?? WHAT HAPPENED?</p>
@@ -742,7 +749,7 @@
             <p>Send it to me</p>
         </div>
         <div id="messagesliza7">
-            <p>What will you do alex??</p>
+            <p>What will you do Alex</p>
         </div>
         <div id="messagesalex6">
             <p>JUST SEND IT LIZA, NOW</p>
@@ -757,7 +764,7 @@
             <p>Good</p>
         </div>
         <div id="messagesliza9">
-            <p>What will you do??</p>
+            <p>What will you do</p>
         </div>
         <div id="messagesalex8">
             <p>I'm going to fucking kill him</p>
@@ -838,6 +845,7 @@ let mission = document.getElementById("mission")
 sendbtn.onclick=function(){
     if(messagebox.value==="Alexey come here"){
         messagesliza1.style.marginRight="0";
+        messagesliza1.style.marginLeft="30vw"
         sentaudio.play();
         messagebox.value="";
         objective.innerHTML="Objective: Send 'Theres someone following me";
@@ -846,15 +854,15 @@ sendbtn.onclick=function(){
         messagesliza2.style.marginRight="0";
         sentaudio.play();
         messagebox.value="";
-        objective.innerHTML="Objective: Alexey!!!!";
+        objective.innerHTML="Objective: Alexey";
     }
-    else if(messagebox.value==="Alexey!!!!"){
+    else if(messagebox.value==="Alexey"){
         messagesliza3.style.marginRight="0";
         sentaudio.play();
         messagebox.value="";
-        objective.innerHTML="Objective: ALEX HE TOUCHED ME AND RAN AWAY WTF????";
+        objective.innerHTML="Objective: ALEX HE TOUCHED ME AND RAN AWAY WTF";
     }
-    else if(messagebox.value==="ALEX HE TOUCHED ME AND RAN AWAY WTF????"){
+    else if(messagebox.value==="ALEX HE TOUCHED ME AND RAN AWAY WTF"){
         messagesliza4.style.marginRight="0";
         sentaudio.play();
         messagebox.value="";
@@ -917,11 +925,11 @@ sendbtn.onclick=function(){
         setTimeout(function() {
             lastseen.innerHTML="Online";
             messagesalex5.style.display="flex";
-            objective.innerHTML="Objective: Send 'What will you do alex??'"
+            objective.innerHTML="Objective: Send 'What will you do alex'"
             receivedaudio.play();
         }, 4000);
     }
-    else if (messagebox.value==="What will you do alex??"){
+    else if (messagebox.value==="What will you do alex"){
         messagebox.value="";
         messagesliza7.style.marginRight="0";
         objective.innerHTML="Objective: Wait for Alexey";
@@ -933,10 +941,10 @@ sendbtn.onclick=function(){
             lastseen.innerHTML="Online";
             messagesalex6.style.display="flex";
             receivedaudio.play();
-            objective.innerHTML="Objective: Send 'Okay baby, here"
+            objective.innerHTML="Objective: Send 'Okay baby here"
         }, 4000);
     }
-    else if (messagebox.value==="Okay baby, here"){
+    else if (messagebox.value==="Okay baby here"){
         messagesliza8.style.marginRight="0";
         messagebox.value="";
         sentaudio.play();
@@ -953,10 +961,10 @@ sendbtn.onclick=function(){
             lastseen.innerHTML="Online";
             messagesalex7.style.display="flex";
             receivedaudio.play();
-            objective.innerHTML="Objective: Send 'What will you do??"
+            objective.innerHTML="Objective: Send 'What will you do"
         }, 8000);
     }
-    else if (messagebox.value==="What will you do??"){
+    else if (messagebox.value==="What will you do"){
         messagebox.value="";
         messagesliza9.style.marginRight="0";
         sentaudio.play();
@@ -1155,7 +1163,10 @@ playmission.onclick=function(){
     chill.play();
 }
 
-
+messagebox.addEventListener('focus', function() {
+    // Prevent the page from scrolling by forcing it to scroll to the top
+    window.scrollTo(0, 0);
+  });
     </script>
 </body>
 </html>
