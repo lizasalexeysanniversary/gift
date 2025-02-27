@@ -16,7 +16,6 @@
     
     <style>
         body{
-            background-color: white;
             background-size: auto;  
             background-position: center; 
             background-repeat: repeat;
@@ -26,7 +25,6 @@
             height: 100%; 
             justify-content: center;
             align-items: center;
-            display: flex;
         }
         #titel{
             color: black;
@@ -360,6 +358,7 @@
         }
         #mission{
             display: block;
+            display: none;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -375,7 +374,6 @@
         }
         #landingpage{
             display: flex;
-            display: none;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -425,6 +423,7 @@
         }
         #mission{
             display: flex;
+            display: none;
 
         }
         #messagediv{
@@ -499,6 +498,7 @@
         #mission{
             height: 95%;
             width: 95%;
+            display: none;
         }
         #textbox{
             width: 100%;
@@ -566,6 +566,56 @@
             border-width: 0.2vw;
             font-size: 4vw;
             border-radius: 2vw;
+        }
+        #aftermath{
+            width: 100%;
+            height: 100%;
+            background-color: beige;
+            display: flex;
+            display: none;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        #Interaction{
+            background-color: rgb(0, 0, 0, 0.75);
+            margin: 2vw;
+            color: beige;
+            display: none;
+        }
+        #nextinteraction,#endvideo{
+            background-color: black;
+            color: white;
+            border-style: solid;
+            border-width: 0.3vw;
+            height: 5vh;
+            width: 30vw;
+            font-size: 5vw;
+            display: none;
+        }
+        #endvideo{
+            display: block;
+            display: none;
+            margin-top: 5vh;
+            background-color: beige;
+            color: black;
+        }
+        #videoplayback{
+            display: flex;
+            display: none;
+            width: 80vw;
+            height: 60vh;
+            border-style: solid;
+            border-width: 1vw;
+            border-color: black;
+            background-color: pink;
+            border-radius: 5vw;
+            margin-top: -10vh;
+        }
+        #missionpasseddiv{
+            display: none;
         }
     </style>
  <div id="landingpage">
@@ -691,7 +741,7 @@
 </div>
 
 <div id="acceptmission">
-    <p>Missions: 1</p>
+    <p id="howmanymissions">Missions: 1</p>
     <br><br>
     <p>Rescue Operation: Liza</p>
     <button id="playmission">Play Mission</button>
@@ -758,7 +808,7 @@
             <p>Okay baby here</p>
         </div>
         <div id="imgmsg">
-            <img id="imgmsg1" src="https://as1.ftcdn.net/jpg/01/21/10/76/1000_F_121107669_qnP4sVWg8tCmQXPnRW2gWdonBNNATtP9.jpg" alt="">
+            <img id="imgmsg1" src="https://media.istockphoto.com/id/514563264/photo/criminal-man-fisheye.jpg?s=612x612&w=is&k=20&c=y5WY6Yg7Fly9YeOFyDsfsfDaAR4wdgYyZPTApUtxXJU=" alt="">
         </div>
         <div id="messagesalex7">
             <p>Good</p>
@@ -775,7 +825,18 @@
         <button id="sendbtn">Send</button>
     </div>
 </div>
+<div id="aftermath">
+    <p id="Interaction">Click next to Start Interaction</p>
+    <button id="nextinteraction">Next</button>
+    <video id="videoplayback" src="https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/videoplayback.webm" autoplay muted></video>
+    <button id="endvideo">Next</button>
+    <div id="missionpasseddiv">
+        <p >Mission Passed <br> Respect +</p>
+    </div>
+</div>
     <script>
+let interaction = document.getElementById("Interaction");
+let nextinteraction = document.getElementById("nextinteraction");
 let img1 = document.getElementById("img1");
 let img2 = document.getElementById("img2");
 let img3 = document.getElementById("img3");
@@ -807,11 +868,13 @@ let container = document.getElementById("container");
 let contnue = document.getElementById("continue");
 let startsong = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/startsong.mp3");
 let melody = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/melody.mp3");
+let typingtext = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/sound.mp3");
 let landinggreet = document.getElementById("landinggreet");
 let continuetwo = document.getElementById("continue2");
 let lizasong = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/lizassong.mp3");
 let sentaudio = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/sendmsg.mp3");
 let receivedaudio = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/received.mp3");
+let missionpassed = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/missionpassed.mp3");
 let boom = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/boom.mp3");
 let dramatic = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/dramatic.mp3");
 let chill = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/chill.mp3");
@@ -841,7 +904,36 @@ let messagesalex7 = document.getElementById("messagesalex7")
 let messagesalex8 = document.getElementById("messagesalex8")
 let imgmsg1 = document.getElementById("imgmsg1")
 let mission = document.getElementById("mission")
+let videoaudio = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/videomp3.mp3")
+let video = document.getElementById("videoplayback")
+function playvideo(){
+    video.play()
+}
 
+let endvideo = document.getElementById("endvideo");
+endvideo.onclick=function(){
+    video.style.display="none"
+    missionpassed.play();
+    document.getElementById("missionpasseddiv").style.display="flex";
+    videoaudio.pause();
+    nextinteraction.style.display="none";
+    endvideo.style.display="none"
+    dramatic.pause();
+    chill.pause();
+    setTimeout(function() {
+        missionpassed.pause();
+        document.getElementById("missionpasseddiv").style.display="none";
+        document.body.style.backgroundImage="url('https://wallpapercat.com/w/full/8/5/0/2154427-3840x2160-desktop-4k-hearts-wallpaper.jpg')";
+        maincontainer.style.display="flex";
+        allcontainer.style.display="block";
+        document.getElementById("howmanymissions").innerHTML="Missions: All missions complete";
+        document.getElementById("playmission").style.backgroundColor="green";
+        document.getElementById("playmission").style.color="black";
+        document.getElementById("playmission").innerHTML="Complete!"
+        document.body.style.display="block";
+        }, 7000);
+
+}
 sendbtn.onclick=function(){
     if(messagebox.value==="Alexey come here"){
         messagesliza1.style.marginRight="0";
@@ -978,9 +1070,13 @@ sendbtn.onclick=function(){
             objective.innerHTML="Awaiting user..."
         }, 4000);
         setTimeout(function() {
-            mission.style.display="none"
-            objective.innerHTML="Awaiting user..."
-            dramatic.pause();
+            mission.style.display="none";
+            objective.innerHTML="Awaiting user...";
+            document.body.style.backgroundColor="beige";
+            document.getElementById("aftermath").style.display="flex";
+            interaction.style.display="block";
+            nextinteraction.style.display="block";
+            console.log("WORKED")
         }, 8000);
         
     }
@@ -1075,9 +1171,80 @@ let texts = [
     "So, When you're ready, Click next :)",
     "."
 ];
+
+let texts1 = [
+    "Click next to Start Interaction",
+    "After that Conversation, Alexey Travelled to Latvia..",
+    "BY FOOT...",
+    "Yes... Exacly. BY FOOT...",
+    "He overcame a lot of obsticles",
+    "He couldnt text you because he had to throw his phone away",
+    "So the FBI cannot locate him",
+    "He became... BATMAN",
+    "He went to latvia and searched for that goofy ass robber",
+    "And then...",
+    "He finally found him",
+    "And when he did,",
+    "He filmed himself beating the SHIT out of him",
+    "And then, it turns out",
+    "IT WAS STUPID MAKSIMS",
+    "AND THEN HE BEAT HIM EVEN MORE",
+    "STUPID NIGGA",
+    "STUPID MAKSIMS",
+    "And then his fag friends came...",
+    "AND HE BEAT THEM UP ASWELL",
+    "FOR BULLYING YOU",
+    "Hehe...",
+    "He is the best Batman...",
+    "Haha",
+    "Anyway...",
+    "After that... He went all the way back...",
+    "TO GERMANY",
+    "And then ...",
+    "Wait a minute...",
+    "Im typing the code right now and I just realized...",
+    "How did I film it if I had no phone 🥶💀",
+    "Uhh..",
+    "Lets change the story into that I just took out the battery",
+    "Yeah",
+    "Ahem",
+    "ALEX HAD TAKEN OUT THE BATTERY",
+    "And then.. when he returned, he sent it to his Wife liza",
+    "And she was still recovering from that incident",
+    "And when she saw it,",
+    "That his savior hero batman alexey texted him finally after 4 months",
+    "She was happy to see the video,",
+    "But she was even happier to see alexey",
+    "And then they had the best sex ever and they had children and etc...",
+    "END OF STORY....",
+    "Oh btw, heres camera footage of him beating the SHIT out of that nigga maksims:",
+    "."
+];
 let index = 0;
 let audio = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/song.mp3"); 
 
+let indexx = 0; 
+
+function typethetext(element, text, speed = 20){
+    element.innerHTML="";
+    let l = 0;
+    let sounda = typingtext;
+    sounda.play();
+    nextinteraction.style.display="none";
+    function typingg(){
+        if (l < text.length){
+            element.innerHTML += text.charAt(l);
+            l++;
+            setTimeout(typingg, speed);
+
+        } else{
+            sounda.pause();
+            sounda.currentTime=0;
+            nextinteraction.style.display="block";
+        }
+    }
+    typingg();
+}
 function typeText(element, text, speed = 20){
     element.innerHTML="";
     let i = 0;
@@ -1111,6 +1278,31 @@ nextbtn.onclick=function(){
         audio.play();
     }
 }
+nextinteraction.onclick = function() {
+    indexx = (indexx+1) % texts1.length;
+    typethetext(interaction, texts1[indexx]);
+    if(texts1[indexx]==="How did I film it if I had no phone 🥶💀"){
+        dramatic.pause();
+        chill.play();
+    }
+    else if(texts1[indexx]==="ALEX HAD TAKEN OUT THE BATTERY"){
+        dramatic.play();
+        chill.pause();
+    }
+    else if(texts1[indexx]==="And she was still recovering from that incident"){
+        dramatic.pause();
+        chill.play();
+    }
+    else if (texts1[indexx]==="."){
+        video.style.display="flex";
+        interaction.style.display="none";
+        nextinteraction.style.display="none";
+        console.log("workedd")
+        document.getElementById("endvideo").style.display="block";
+        videoaudio.play();
+        chill.pause();
+    }
+};
 document.addEventListener("DOMContentLoaded", function () {
     const playSongBtn = document.getElementById("playsongbtn");
     const timerDisplay = document.getElementById("timer");
@@ -1155,18 +1347,26 @@ document.addEventListener("DOMContentLoaded", function () {
 playmission.onclick=function(){
     allcontainer.style.display="none";
     maincontainer.style.display="none";
-    document.body.style.backgroundColor="pink";
     document.getElementById("mission").style.display="flex";
     document.body.style.display="flex";
     audio.pause();
     lizasong.pause();
     chill.play();
+    document.body.style.backgroundImage = "none"; 
+    document.body.style.backgroundColor="pink";
+    function scrollback(){
+        window.scrollTo(0,0);
+    }
 }
+window.addEventListener('DOMContentLoaded', function () {
+    if (!/Mobi|Android|iPhone|iPod/i.test(navigator.userAgent) || /iPad/i.test(navigator.userAgent)) {
+       contnue.style.display="none";
+       landinggreet.innerHTML="Sorry, This isnt available for PC! Only for phone, my silly baby Liza 😋🥰🥰🥰";
+       landinggreet.style.width="50vw";
+       landinggreet.style.fontSize="2vw"
+    }
+});
 
-messagebox.addEventListener('focus', function() {
-    // Prevent the page from scrolling by forcing it to scroll to the top
-    window.scrollTo(0, 0);
-  });
     </script>
 </body>
 </html>
