@@ -16,6 +16,7 @@
     
     <style>
         body{
+
             background-color: white;
             background-size: auto;  
             background-position: center; 
@@ -201,7 +202,7 @@
             font-size: large;
             transition: 0.25s;
         }
-        #textromance, #songdiv{
+        #textromance, #songdiv,#acceptmission{
             background-color: transparent;
             height: auto;
             width: 65%;
@@ -220,7 +221,7 @@
             text-align: start;
             padding: 50px;
             padding-left: 50px;
-            margin-top: 40vh;
+            margin-top: 35vh;
         }
         #firstdiv,
         #seconddiv
@@ -300,6 +301,7 @@
         }
         #landingpage{
             display: flex;
+            display: none;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -307,14 +309,12 @@
         #maincontainer{
             text-align: center;
             display: flex;
-            display: none;
             justify-content: center;
             align-items: center;
             height: 50%; 
         }
         #allcontainer{
             display: block;
-            display: none;
         }
         #background-video {
             position: fixed;
@@ -340,15 +340,20 @@
             height: 100vh;
             backdrop-filter: blur(5px);
         }
-        #songdiv{
+        #songdiv,
+        #acceptmission
+        {
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: -120%;
+            margin-top: -130%;
             font-size: 4vw;
             
+        }
+        #acceptmission{
+            margin-top: 10vh;
         }
         #playsongbtn{
             width: 50%;
@@ -369,6 +374,16 @@
         #timer{
             color: goldenrod;
             font-size: 5vw;
+        }
+        #mission{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            background-image: url("https://i.redd.it/ts7vuoswhwf41.jpg");
+            height: 50%;
+            width: 80%;
         }
     </style>
     <div id="landingpage">
@@ -484,6 +499,7 @@
             Happy Anniversary my Love, My wife, My girl, My lady, My woman, My World, My everything, My Liza, My Bojaruneca MY Whole world 😍🥰😋
         </p>
     </div>
+    
     <div id="songdiv">
     <p> <span id="nameliza2">Liza's</span> <span id="country">Latvian</span> Song - By <span id="myname">Alexey</span></p>
     <p id="timer">
@@ -491,7 +507,15 @@
     </p>
     <button id="playsongbtn">Play Song</button>
     </div>
+
+    <div id="acceptmission">
+        <p>e</p>
+    </div>
+
 </div>
+    <div id="mission">
+        
+    </div>
     <script>
 let img1 = document.getElementById("img1");
 let img2 = document.getElementById("img2");
@@ -684,14 +708,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     updateTimerDisplay(timeLeft); 
-});
-window.addEventListener('DOMContentLoaded', function () {
-    if (!/Mobi|Android|iPhone|iPod/i.test(navigator.userAgent) || /iPad/i.test(navigator.userAgent)) {
-       contnue.style.display="none";
-       landinggreet.innerHTML="Sorry, This isnt available for PC! Only for phone, my silly baby Liza 😋🥰🥰🥰";
-       landinggreet.style.width="50vw";
-       landinggreet.style.fontSize="2vw"
-    }
 });
 
     </script>
