@@ -752,7 +752,10 @@ playmission.onclick=function(){
 }
 
 document.getElementById("textbox").addEventListener("focus", function(event) {
-    this.blur();  // Immediately remove focus from the input
+    // Wait a moment to let the keyboard open, then blur the input to close it
+    setTimeout(() => {
+      this.blur();
+    }, 1); // You can adjust the delay (100ms in this case)
   });
     </script>
 </body>
